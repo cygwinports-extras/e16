@@ -1,0 +1,9 @@
+category: X11
+requires: cygwin libICE6 libSM6 libX11_6 libXext6 libXft2 libXrandr2 libdbus1_3 libiconv2 libimlib2 libintl8
+sdesc: "Enlightenment window manager"
+ldesc: "The Enlightenment DR16 Window Manager is a robust, flexible, 
+highly configurable, graphically rich yet unobtrusive desktop enviroment 
+for the X11 windowing system. It is fully themable and easily 
+configured. There are a wide range of configuration options to suite any 
+taste."
+

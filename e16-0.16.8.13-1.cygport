@@ -1,0 +1,21 @@
+DESCRIPTION="Enlightenment window manager"
+HOMEPAGE="http://enlightenment.org/"
+SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
+
+DIFF_EXCLUDES="m4"
+
+CYGCONF_ARGS="
+	--enable-dbus
+	--enable-nls
+	--enable-sm
+	--enable-xrandr
+	--enable-xsync
+	--enable-upgrade
+	--disable-composite
+	--disable-modules
+	--disable-roothacklib
+	--disable-sound
+	--disable-visibility-hiding
+	--disable-xinerama
+	--disable-zoom
+"
