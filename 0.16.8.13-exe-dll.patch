@@ -12,17 +12,6 @@
  			$i = "$EdirRoot/epplet_icons/$e.icon";
  			print FD "\"$e\" \"$i\" exec \"$d/$e.epplet\"\n";
  		}
---- origsrc/e16-0.16.8.13/src/edbus.c	2008-05-01 06:33:22.000000000 -0500
-+++ src/e16-0.16.8.13/src/edbus.c	2008-05-23 08:21:39.359375000 -0500
-@@ -53,7 +53,7 @@
- DbusWatchAdd(DBusWatch * watch, void *data __UNUSED__)
- {
-    dbus_data.watch = watch;
--   dbus_data.fd = dbus_watch_get_unix_fd(watch);
-+   dbus_data.fd = dbus_watch_get_fd(watch);
- 
-    D2printf("DbusWatchAdd fd=%d flags=%d\n", dbus_data.fd,
- 	    dbus_watch_get_flags(dbus_data.watch));
 --- origsrc/e16-0.16.8.13/src/misc.c	2008-05-01 06:33:22.000000000 -0500
 +++ src/e16-0.16.8.13/src/misc.c	2008-05-23 08:21:39.375000000 -0500
 @@ -320,7 +320,14 @@
