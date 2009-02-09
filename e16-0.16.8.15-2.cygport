@@ -11,12 +11,12 @@ CYGCONF_ARGS="
 	--enable-nls
 	--enable-sm
 	--enable-sound-esound
+	--enable-xinerama
 	--enable-xrandr
 	--enable-xsync
 	--enable-upgrade
 	--disable-modules
 	--disable-roothacklib
 	--disable-visibility-hiding
-	--disable-xinerama
 	--disable-zoom
 "
