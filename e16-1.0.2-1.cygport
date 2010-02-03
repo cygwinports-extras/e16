@@ -3,7 +3,7 @@ HOMEPAGE="http://enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 PATCH_URI="0.16.8.13-exe-dll.patch"
 
-DIFF_EXCLUDES="m4 po"
+#DIFF_EXCLUDES="m4 po"
 
 CYGCONF_ARGS="
 	--enable-composite
