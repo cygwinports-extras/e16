@@ -1,6 +1,6 @@
---- origsrc/e16-0.16.8.13/scripts/e_gen_menu	2008-03-22 11:20:18.000000000 -0500
-+++ src/e16-0.16.8.13/scripts/e_gen_menu	2008-05-23 09:30:22.687500000 -0500
-@@ -378,9 +378,9 @@
+--- origsrc/e16-1.0.10/scripts/e_gen_menu	2011-08-24 15:37:33.000000000 -0500
++++ src/e16-1.0.10/scripts/e_gen_menu	2011-11-03 18:40:32.676348400 -0500
+@@ -379,9 +379,9 @@ sub MakeEppsMenu {
  		next if ($done{$d});
  		$done{$d} = 1;
  		print "Looking for epplets in $d\n" if $dbg ge 1;
@@ -12,19 +12,16 @@
  			$i = "$EdirRoot/epplet_icons/$e.icon";
  			print FD "\"$e\" \"$i\" exec \"$d/$e.epplet\"\n";
  		}
---- origsrc/e16-0.16.8.13/src/misc.c	2008-05-01 06:33:22.000000000 -0500
-+++ src/e16-0.16.8.13/src/misc.c	2008-05-23 08:21:39.375000000 -0500
-@@ -320,7 +320,14 @@
+--- origsrc/e16-1.0.10/src/misc.c	2011-08-28 14:34:48.000000000 -0500
++++ src/e16-1.0.10/src/misc.c	2011-11-03 18:41:07.339608800 -0500
+@@ -308,7 +308,11 @@ ModLoadSym(const char *lib, const char *
     char                buf[1024];
     void               *h;
  
 +#ifdef __CYGWIN__
-+#ifndef RTLD_LOCAL
-+#define RTLD_LOCAL 0
-+#endif
-+   Esnprintf(buf, sizeof(buf), "%s/cyg%s_%s.dll", ENLIGHTENMENT_LIB, lib, name);
++   Esnprintf(buf, sizeof(buf), "%s/cyg%s_%s.dll", EDirLib(), lib, name);
 +#else
-    Esnprintf(buf, sizeof(buf), "%s/lib%s_%s.so", ENLIGHTENMENT_LIB, lib, name);
+    Esnprintf(buf, sizeof(buf), "%s/lib%s_%s.so", EDirLib(), lib, name);
 +#endif
     if (EDebug(1))
        Eprintf("ModLoad %s\n", buf);

@@ -1,22 +1,17 @@
 DESCRIPTION="Enlightenment window manager"
 HOMEPAGE="http://enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
-PATCH_URI="0.16.8.13-exe-dll.patch"
-
-#DIFF_EXCLUDES="m4 po"
+PATCH_URI="1.0.10-cygwin.patch"
 
 CYGCONF_ARGS="
 	--enable-composite
 	--enable-dbus
 	--enable-nls
 	--enable-sm
-	--enable-sound-esound
 	--enable-xinerama
 	--enable-xrandr
 	--enable-xsync
-	--enable-upgrade
 	--disable-modules
-	--disable-roothacklib
+	--disable-sound-esound
 	--disable-visibility-hiding
-	--disable-zoom
 "
