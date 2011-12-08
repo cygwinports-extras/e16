@@ -12,6 +12,5 @@ CYGCONF_ARGS="
 	--enable-xrandr
 	--enable-xsync
 	--disable-modules
-	--disable-sound-esound
 	--disable-visibility-hiding
 "
